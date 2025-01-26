@@ -1,0 +1,1 @@
+{"uuid":"46452560-2a6a-4619-aa10-5c7cc6a8bcd0","name":"Default Suite","children":["b5878836-8730-447c-990e-b4901b975eb9"],"befores":[{"name":"BaseRami","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1729243532877,"stop":1729243541188}],"afters":[],"start":1729243532829,"stop":1729243546583}
