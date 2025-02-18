@@ -11,11 +11,31 @@ public class Overview {
     @FindBy (xpath = "//button[@id='finish']")
     private WebElement finish;
 
+    @FindBy (css = "div[class='summary_subtotal_label']")
+    private WebElement summary;
+
+    @FindBy ( css = "div[class='summary_tax_label']")
+    private WebElement tax;
+
      public void totalprices() {
         String totalpricealltheitem = totalprice.getText().trim();
         String expectedtotal = "Total: $32.39";
         Assert.assertEquals(totalpricealltheitem,expectedtotal);
        System.out.println("The total price is : "+ totalpricealltheitem);
+
+   }
+
+   public void checkthetax(){
+
+       String itemTotalText = summary.getText().replace("Item total: $", "").trim();
+       double itemTotal = Double.parseDouble(itemTotalText);
+       double expectedTotal = itemTotal * 1.08008;
+       expectedTotal = Math.round(expectedTotal * 100.0) / 100.0;
+
+       String totalText = totalprice.getText().replace("Total: $", "").trim();
+       double actualTotal = Double.parseDouble(totalText);
+
+       Assert.assertEquals(actualTotal, expectedTotal, 0.01);
 
    }
 

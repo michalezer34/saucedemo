@@ -1,5 +1,6 @@
 package SauceDemo;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.List;
+
+
 
 
 public class ProductsPage {
@@ -37,6 +40,11 @@ public class ProductsPage {
 
     @FindBy(id = "add-to-cart-sauce-labs-backpack")
     private WebElement pickupitem;
+
+    @FindBy(css = "button[class='btn btn_primary btn_small btn_inventory ']")
+    private WebElement fourproducts;
+
+
 
     @FindBy(xpath = "//a[@class='shopping_cart_link']")
     private WebElement clickgotopaymant;
@@ -71,6 +79,14 @@ public class ProductsPage {
         }
     }
 
+    public void pickupitems(){
+        List<WebElement> buttons1 = fourproducts.findElements(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory ']"));
+        for (WebElement button : buttons1) {
+            button.click();
+        }
+    }
+
+
 
     public void next () {
             cart.click();
@@ -87,6 +103,10 @@ public class ProductsPage {
         public void pickup(){
         pickupitem.click();
         }
+
+
+
+
 
         public void setClickgotopaymant(){
         clickgotopaymant.click();

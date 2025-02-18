@@ -77,6 +77,19 @@ public class TestMainPage extends BaseDemo {
         overview.totalprices();
         overview.finishpage();
         thanks.thankspage();
+            }
+
+
+            @Test (description = "buy some products and check the tax",priority = 5)
+    public void checkthetax(){
+                login.logintosite("standard_user", "secret_sauce");
+                productsPage.pickupitems();
+                productsPage.setClickgotopaymant();
+                productsPage.setCheckout();
+                checkoutinfo.checkoutpage("michal", "ezer", "007");
+                overview.checkthetax();
+                overview.finishpage();
+                thanks.thankspage();
 
             }
     }
