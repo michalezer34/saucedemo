@@ -4,8 +4,7 @@ package SauceDemo;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-
+import org.testng.asserts.SoftAssert;
 
 
 public class MainPage  {
@@ -26,7 +25,8 @@ public class MainPage  {
         @FindBy(xpath ="//input[@name='login-button']" )
         private WebElement clicklogin;
 
-
+        @FindBy(css = "h3[data-test='error']")
+        private WebElement lockout;
 
 
     public void logintosite(String username ,String passward) {
@@ -35,8 +35,9 @@ public class MainPage  {
             clickpass.click();
             sendpass.sendKeys(passward);
             clicklogin.click();
+            lockout.getText();
+
 
     }
-
 
 }
