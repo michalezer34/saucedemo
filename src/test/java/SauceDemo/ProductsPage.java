@@ -87,7 +87,6 @@ public class ProductsPage {
     }
 
 
-
     public void next () {
             cart.click();
         String itemsonthecart = iteminthecart.getText();
@@ -98,21 +97,12 @@ public class ProductsPage {
         public void setCheckout(){
             checkout.click();
         }
-
-
         public void pickup(){
         pickupitem.click();
         }
-
-
-
-
-
         public void setClickgotopaymant(){
         clickgotopaymant.click();
         }
-
-
 
     }
 

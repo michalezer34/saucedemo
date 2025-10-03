@@ -3,13 +3,10 @@ package SauceDemo;
 import io.qameta.allure.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
@@ -18,12 +15,9 @@ import java.util.concurrent.TimeUnit;
 public class TestMainPage extends BaseDemo {
 
 
-
-
-
     @Test(description = "Title of the pagee",priority = 1)
     @Description("This test verify the the title of the page")
-    public void titleofthepage(){
+    public void titleOfThePage(){
         String logintitle= driver.getTitle();
         System.out.println(logintitle);
         Assert.assertEquals(logintitle,"Swag Labs");
@@ -31,13 +25,13 @@ public class TestMainPage extends BaseDemo {
 
         @Test(description = "Test - login to the site" ,priority = 2)
         @Description("This test fill the username and the password")
-        public void logintosite() {
-            login.logintosite("standard_user", "secret_sauce");
 
+        public void loginToSite() {
+            login.logintosite("standard_user", "secret_sauce");
         }
 
         @Test(description = "check all the error fields and try to get in to the site with error user",priority = 2)
-        public void errorfeildsmainpage(){
+        public void errorFieldMainPageTest(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         login.logintosite("locked_out_user","secret_sauce");
         String lockout = driver.findElement(By.cssSelector("h3[data-test='error']")).getText();
@@ -68,7 +62,7 @@ public class TestMainPage extends BaseDemo {
 
             @Test(description = "Test - page of checkout" ,priority = 4)
             @Description("This test fill a form")
-            public void checkoutpage() {
+            public void checkOutPage() {
          login.logintosite("standard_user", "secret_sauce");
         productsPage.pickup();
         productsPage.setClickgotopaymant();
@@ -81,7 +75,7 @@ public class TestMainPage extends BaseDemo {
 
 
             @Test (description = "buy some products and check the tax",priority = 5)
-    public void checkthetax(){
+    public void checkTheTax(){
                 login.logintosite("standard_user", "secret_sauce");
                 productsPage.pickupitems();
                 productsPage.setClickgotopaymant();
