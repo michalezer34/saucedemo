@@ -1,1 +1,0 @@
-{"uuid":"376e0d44-c3c4-4697-bfae-fd37c9a4a526","name":"Default Suite","children":["e2300e52-30cb-4b2a-a6e3-1090b43d83ea"],"befores":[{"name":"BaseElAl","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1731745929170,"stop":1731745932505}],"afters":[],"start":1731745929139,"stop":1731745946838}

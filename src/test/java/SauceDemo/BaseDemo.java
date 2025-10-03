@@ -58,30 +58,13 @@ public class BaseDemo {
      overview = PageFactory.initElements(driver, Overview.class);
      thanks = PageFactory.initElements(driver, Thanks.class);
  }
-
-    /*public void BaseDemo() {
-     WebDriverManager.chromedriver().setup();
-     driver = new ChromeDriver();
-     driver.manage().window().maximize();
-     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-     driver.get("https://www.saucedemo.com/");
-     login = PageFactory.initElements(driver,MainPage.class);
-     productsPage=PageFactory.initElements(driver, ProductsPage.class);
-     checkoutinfo=PageFactory.initElements(driver, Checkoutinfo.class);
-     overview=PageFactory.initElements(driver, Overview.class);
-     thanks=PageFactory.initElements(driver, Thanks.class);
-
- }*/
-
         @AfterMethod
     public void closesession(){
             Uninterruptibles.sleepUninterruptibly(5,TimeUnit.SECONDS);
 
         }
-
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }}
-
         }

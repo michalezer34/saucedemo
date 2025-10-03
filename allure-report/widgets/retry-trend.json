@@ -1,1 +1,1 @@
-[{"buildOrder":2,"reportUrl":"http://localhost:9090/job/Saucedemo/2/allure","reportName":"AllureReport","data":{"run":20,"retry":405}},{"buildOrder":1,"reportUrl":"http://localhost:9090/job/Saucedemo/1/allure","reportName":"AllureReport","data":{"run":15,"retry":207}},{"buildOrder":2,"reportUrl":"http://localhost:9090/job/TestAutomation%20-%20Pizza/2/allure","reportName":"AllureReport","data":{"run":8,"retry":113}}]
+[{"data":{"run":6,"retry":0}}]

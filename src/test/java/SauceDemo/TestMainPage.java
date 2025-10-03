@@ -9,11 +9,8 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-
-
 @Listeners(AutomationListenersWithScreenshots.class)
 public class TestMainPage extends BaseDemo {
-
 
     @Test(description = "Title of the pagee",priority = 1)
     @Description("This test verify the the title of the page")
@@ -49,7 +46,6 @@ public class TestMainPage extends BaseDemo {
 
         }
 
-
         @Test(description = "Test - page of products" ,priority = 3)
         @Description("This test fill the cart with products")
         public void productspage() {
@@ -72,7 +68,6 @@ public class TestMainPage extends BaseDemo {
         overview.finishpage();
         thanks.thankspage();
             }
-
 
             @Test (description = "buy some products and check the tax",priority = 5)
     public void checkTheTax(){

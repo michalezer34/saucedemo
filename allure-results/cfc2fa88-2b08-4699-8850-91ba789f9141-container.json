@@ -1,1 +1,0 @@
-{"uuid":"cfc2fa88-2b08-4699-8850-91ba789f9141","name":"kakl.testkaka","children":["dc4dc0f8-fef7-47c4-acc6-7d1545489b29"],"befores":[],"afters":[{"name":"closeSession","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1728285921621,"stop":1728285924624}],"start":1728285901656,"stop":1728285924693}
