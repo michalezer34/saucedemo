@@ -41,6 +41,15 @@ public class BaseDemo {
      options.addArguments("--disable-notifications");
      options.addArguments("--disable-popup-blocking");
      options.addArguments("--incognito"); // מצב גלישה בסתר
+     // ✅ הוסיפי את השורות הבאות:
+
+     // ✅ הוספת מצב headless רק אם אנחנו בסביבת CI
+     String ciEnv = System.getenv("CI");
+     if (ciEnv != null && ciEnv.equals("true")) {
+         options.addArguments("--headless=new");
+         options.addArguments("--no-sandbox");
+         options.addArguments("--disable-dev-shm-usage");
+     }
 
      // יצירת הדרייבר עם ההגדרות
      driver = new ChromeDriver(options);
