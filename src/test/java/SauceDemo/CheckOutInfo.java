@@ -3,7 +3,7 @@ package SauceDemo;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Checkoutinfo {
+public class CheckOutInfo {
     @FindBy(xpath = "// input[@id='first-name']")
     private WebElement firstname;
     @FindBy(id = "last-name")

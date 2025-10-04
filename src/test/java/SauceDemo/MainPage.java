@@ -35,8 +35,6 @@ public class MainPage  {
             clickpass.click();
             sendpass.sendKeys(passward);
             clicklogin.click();
-
-
     }
 
 }

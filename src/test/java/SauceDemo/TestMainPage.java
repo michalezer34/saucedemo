@@ -50,9 +50,9 @@ public class TestMainPage extends BaseDemo {
         @Description("This test fill the cart with products")
         public void productspage() {
             login.logintosite("standard_user", "secret_sauce");
-            productsPage.clicktosort();
-            productsPage.selectsort("lohi");
-            productsPage.chechallthelowthinks();
+            productsPage.clickToSort();
+            productsPage.selectSort("lohi");
+            productsPage.checkAllTheLowThinks();
             productsPage.next();
         }
 
@@ -61,10 +61,10 @@ public class TestMainPage extends BaseDemo {
             public void checkOutPage() {
          login.logintosite("standard_user", "secret_sauce");
         productsPage.pickup();
-        productsPage.setClickgotopaymant();
+        productsPage.setClickGoToPayment();
         productsPage.setCheckout();
         checkoutinfo.checkoutpage("michal", "ezer", "007");
-        overview.totalprices();
+        overview.totalPrices();
         overview.finishpage();
         thanks.thankspage();
             }
@@ -72,11 +72,11 @@ public class TestMainPage extends BaseDemo {
             @Test (description = "buy some products and check the tax",priority = 5)
     public void checkTheTax(){
                 login.logintosite("standard_user", "secret_sauce");
-                productsPage.pickupitems();
-                productsPage.setClickgotopaymant();
+                productsPage.pickUpItems();
+                productsPage.setClickGoToPayment();
                 productsPage.setCheckout();
                 checkoutinfo.checkoutpage("michal", "ezer", "007");
-                overview.checkthetax();
+                overview.checkTheTax();
                 overview.finishpage();
                 thanks.thankspage();
 

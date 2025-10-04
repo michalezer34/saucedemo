@@ -17,15 +17,15 @@ public class Overview {
     @FindBy ( css = "div[class='summary_tax_label']")
     private WebElement tax;
 
-     public void totalprices() {
-        String totalpricealltheitem = totalprice.getText().trim();
-        String expectedtotal = "Total: $32.39";
-        Assert.assertEquals(totalpricealltheitem,expectedtotal);
-       System.out.println("The total price is : "+ totalpricealltheitem);
+     public void totalPrices() {
+        String totalPriceAllTheItem = totalprice.getText().trim();
+        String expectedTotal = "Total: $32.39";
+        Assert.assertEquals(totalPriceAllTheItem,expectedTotal);
+       System.out.println("The total price is : "+ totalPriceAllTheItem);
 
    }
 
-   public void checkthetax(){
+   public void checkTheTax(){
 
        String itemTotalText = summary.getText().replace("Item total: $", "").trim();
        double itemTotal = Double.parseDouble(itemTotalText);

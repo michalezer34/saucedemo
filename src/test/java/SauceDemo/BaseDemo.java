@@ -8,9 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +20,7 @@ public class BaseDemo {
     static MainPage login ;
 
     static ProductsPage productsPage;
-    static Checkoutinfo checkoutinfo;
+    static CheckOutInfo checkoutinfo;
     static Overview overview;
     static Thanks thanks;
 
@@ -54,12 +52,12 @@ public class BaseDemo {
      // אתחול עמודים
      login = PageFactory.initElements(driver, MainPage.class);
      productsPage = PageFactory.initElements(driver, ProductsPage.class);
-     checkoutinfo = PageFactory.initElements(driver, Checkoutinfo.class);
+     checkoutinfo = PageFactory.initElements(driver, CheckOutInfo.class);
      overview = PageFactory.initElements(driver, Overview.class);
      thanks = PageFactory.initElements(driver, Thanks.class);
  }
         @AfterMethod
-    public void closesession(){
+    public void closeSession(){
             Uninterruptibles.sleepUninterruptibly(5,TimeUnit.SECONDS);
 
         }
